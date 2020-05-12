@@ -1,0 +1,25 @@
+1. SELECT * FROM ospiti
+   WHERE document_type = 'CI'
+
+2. SELECT * FROM ospiti
+   WHERE date_of_birth > '1988'
+
+3. SELECT * FROM ospiti
+   WHERE date_of_birth <= '2000-05-12'
+
+4. SELECT * FROM ospiti
+   WHERE name LIKE 'D%'
+
+5. SELECT SUM(price) FROM pagamenti
+   WHERE status = 'accepted'
+
+6. SELECT MAX(price) FROM pagamenti
+   WHERE status = 'accepted'
+
+7. SELECT * FROM ospiti
+  WHERE document_type = 'driver license' 
+  AND date_of_birth > '1974'
+  AND date_of_birth < '1976'
+
+8. SELECT SUM(beds)
+   FROM stanze
