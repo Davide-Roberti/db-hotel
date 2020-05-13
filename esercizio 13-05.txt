@@ -1,0 +1,23 @@
+GROUP BY
+
+1. SELECT YEAR(date_of_birth), COUNT(id)
+   FROM ospiti
+   GROUP BY 1
+
+2. SELECT `status`, SUM(`price`)
+   FROM pagamenti
+   GROUP BY 1
+
+3. SELECT `stanza_id`, COUNT(`id`)
+   FROM prenotazioni
+   GROUP BY 1
+
+4. SELECT TIME_FORMAT(created_at, "%h %p"), COUNT(id)
+   FROM prenotazioni
+   GROUP BY 1
+
+5. SELECT COUNT(`prenotazione_id`)
+   FROM prenotazioni_has_ospiti
+   GROUP BY ospite_id
+   ORDER BY 1 DESC
+   LIMIT 1
